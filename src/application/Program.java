@@ -13,8 +13,6 @@ public class Program {
 
         List<Product> productList = new ArrayList<>();
 
-        Scanner scanner = new Scanner(System.in);
-
         String file = "/home/dayane/Documents/exercicio-generics";
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
@@ -30,6 +28,7 @@ public class Program {
             System.out.println(product);
 
         } catch (IOException e) {
+            System.out.println("Erroe:" + e.getMessage());
 
 
         }
