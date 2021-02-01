@@ -1,6 +1,7 @@
 package application;
 
 import entites.Product;
+import service.CalculationService;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -24,7 +25,9 @@ public class Program {
                 productList.add(new Product(fields[0], Double.parseDouble(fields[1])));
                 line = bufferedReader.readLine();
             }
-
+            Product product = CalculationService.max(productList);
+            System.out.println("max: ");
+            System.out.println(product);
 
         } catch (IOException e) {
 
