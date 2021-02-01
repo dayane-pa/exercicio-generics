@@ -22,8 +22,7 @@ public class Program {
                 String[] fields = line.split(",");
 
                 productList.add(new Product(fields[0], Double.parseDouble(fields[1])));
-
-
+                line = bufferedReader.readLine();
             }
 
 
